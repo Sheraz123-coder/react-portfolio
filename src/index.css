@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+.gradient-text {
+  background: linear-gradient(135deg, #fbb885 0%, #ed5da5 50%, #db9112 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.navlist li:hover {
+  cursor: pointer;
+  color: rgb(213, 123, 193);
+}
