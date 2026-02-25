@@ -34,7 +34,7 @@ const Footer = () => {
       ">
         <a 
           className="hover:scale-110 transition duration-300 text-green-500"
-          href=""
+          href="https://wa.me/+923027745848"
         >
           <FaWhatsapp />
         </a>
