@@ -1,44 +1,78 @@
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
-import React from 'react'
-import { useRef } from 'react'
+import React, { useRef } from 'react'
 
-const PastProject = ({pics,title}) => {
-    const videoref = useRef()
-    useGSAP(()=>{
-        const tl=gsap.timeline()
-        tl.from(videoref.current.children,{
-            y:120,
-            scrollTrigger:{
-                trigger:videoref.current.children,
-                width:0,
-                opacity:0,
-                start:"top 80%",
-                end:"top 20%",
-                scrub:true,
-                stagger:{
-                    amount:0.4,
-                },
-                
-            }
-        })
+const PastProject = ({ pics, title }) => {
+  const videoref = useRef()
 
+  useGSAP(() => {
+    gsap.from(videoref.current, {
+      y: 120,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: videoref.current,
+        start: "top 80%",
+        end: "top 20%",
+        scrub: true,
+      }
     })
-  return (
-   <>
-    <div  className="projectcard   flex justify-center items-center gap-4 mt-4   flex-col">
-        .
-        <div  ref={videoref} className="myimage relative w-3/4">
-            <video className='rounded-3xl shadow-md shadow-cyan-500/50 ' src={pics} controls muted autoPlay ></video>
-            <div className="projectname transition-all opacity-0 hover:opacity-100 absolute top-50 left-50">
-            <h2 className='text-white text-4xl  gradient-text font-bold'>{title}</h2>
-        </div>
-        </div>
-        
+  }, [])
 
+  return (
+    <div className="projectcard flex justify-center items-center mt-6 px-4">
+
+      <div
+        ref={videoref}
+        className="
+          relative 
+          w-full 
+          sm:w-[90%] 
+          md:w-[75%] 
+          lg:w-[60%] 
+          group
+        "
+      >
+        <video
+          className="
+            w-full 
+            h-auto 
+            rounded-3xl 
+            shadow-md 
+            shadow-cyan-500/50
+          "
+          src={pics}
+          controls
+          muted
+        />
+
+        {/* Hover Title */}
+        <div className="
+          absolute 
+          inset-0 
+          flex 
+          items-center 
+          justify-center
+          opacity-0 
+          group-hover:opacity-100
+          transition-all 
+          duration-300
+          bg-black/40
+          rounded-3xl
+        ">
+          <h2 className="
+            text-white 
+            text-xl 
+            sm:text-2xl 
+            md:text-3xl 
+            font-bold
+            text-center
+          ">
+            {title}
+          </h2>
+        </div>
+
+      </div>
     </div>
-    
-   </>
   )
 }
 
