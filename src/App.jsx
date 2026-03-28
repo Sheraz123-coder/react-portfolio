@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+// import { useState, useRef } from "react";
 import {
   CameraIcon,
   ComputerDesktopIcon,
@@ -11,6 +11,11 @@ import Footer from "./Component/Footer";
 import Svgcards from "./Component/Svgcards";
 import PastProject from "./Component/PastProject";
 import Colortext from "./Component/Colortext";
+import vid1 from "./Component/Videos/1.mp4"
+import vid2 from "./Component/Videos/2.mp4"
+import vid3 from "./Component/Videos/3.mp4"
+import vid4 from "./Component/Videos/4.mp4"
+import vid5 from "./Component/Videos/5.mp4"
 
 function App() {
   return (
@@ -78,29 +83,30 @@ function App() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <PastProject
-            pics={"https://www.pexels.com/download/video/5198042/"}
+            pics={vid1}
+            title={"Talking Head Videos"}
+          />
+          <PastProject
+            pics={vid2}
+            title={"Documentary"}
+          />
+          <PastProject
+            pics={vid3}
+            title={"Poadcast video Editing"}
+          />
+          <PastProject
+            pics={vid4}
+            title={"Voice Over"}
+          />
+          <PastProject
+            pics={vid5}
             title={"Talking Head Videos"}
           />
           <PastProject
             pics={"https://www.pexels.com/download/video/2053420/"}
             title={"Documentary"}
           />
-          <PastProject
-            pics={"https://www.pexels.com/download/video/5174040/"}
-            title={"Poadcast video Editing"}
-          />
-          <PastProject
-            pics={"https://www.pexels.com/download/video/15200537/"}
-            title={"Voice Over"}
-          />
-          <PastProject
-            pics={"https://www.pexels.com/download/video/4835868/"}
-            title={"3d Videos"}
-          />
-          <PastProject
-            pics={"https://www.pexels.com/download/video/4923273/"}
-            title={"Talking Head Videos"}
-          />
+        
         </div>
 
         <div className="pagelink mt-10 text-center">
@@ -154,4 +160,4 @@ function App() {
   );
 }
 
-export default App;
+export default App
