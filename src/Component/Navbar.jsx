@@ -46,7 +46,7 @@ const Navbar = () => {
           <li className="hover:text-purple-400 cursor-pointer"><a href="#about">About</a></li>
           <li className="hover:text-purple-400 cursor-pointer"><a href="#projects">Projects</a></li>
           <li className="hover:text-purple-400 cursor-pointer"><a href="#reviews">Reviews</a></li>
-          <li className="hover:text-purple-400 cursor-pointer"><a href="#skill">Skills</a></li>
+          <li className="hover:text-purple-400 cursor-pointer"><a href="#footer">Contact</a></li>
         </ul>
 
         {/* Mobile Menu Button */}

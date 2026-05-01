@@ -23,6 +23,9 @@ function App() {
       </div>
 
       {/* PAGE 2 */}
+      <section id="about">
+
+
       <div
         className="page2 relative min-h-screen bg-[url(https://images.pexels.com/photos/16886370/pexels-photo-16886370.jpeg)] bg-cover bg-center text-white"
       >
@@ -58,6 +61,8 @@ function App() {
           </div>
         </div>
       </div>
+      </section>
+
 
       {/* PAGE 3 */}
       <section id="projects">
@@ -100,10 +105,12 @@ function App() {
           </button>
         </div>
       </div>
-            </section>
+        </section>
 
 
       {/* PAGE 4 */}
+      <section id="reviews">
+
       <div className="page4 px-4 sm:px-10 py-12 text-center bg-gray-100">
         <div className="heading text-orange-300">
           <h3 className="font-extrabold text-2xl sm:text-3xl md:text-4xl gradient-text">From Fiverr</h3>
@@ -136,8 +143,13 @@ function App() {
           />
         </div>
       </div>
+            </section>
+
+<section id="footer">
+
 
       <Footer />
+</section>
     </>
   );
 }
